@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75a649f9-1339-4713-b026-a598d7419df7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="connection"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="Perro" class="java.lang.String"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT public.personajes.id,
+	public.personajes.posicion_actual,
+	public.personajes.velocidad,
+	public.personajes.estado
+FROM public.personajes]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="posicion_actual" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="posicion_actual"/>
+	</field>
+	<field name="velocidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="velocidad"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="100" y="16" width="380" height="30" backcolor="#F1F58E" uuid="3b96d8b0-1a4d-4198-b77d-f1c3d0b6e1c5"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gungsuh" size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reporte de Personajes"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="483" y="23" width="50" height="50" uuid="9462ce19-b667-48ae-bea6-0c847efab5a4"/>
+				<imageExpression><![CDATA[$P{Perro}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="141" height="37" backcolor="#5CDBF7" uuid="5f6b552c-75ea-474d-9b0c-9ab706f616fd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="27a37dc6-dbda-4531-8694-c56836a60442"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="141" y="0" width="138" height="37" backcolor="#5CDBF7" uuid="c6f9b818-191b-4189-979b-6be2eb6930f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b90fea31-f42a-4af8-b390-f4dda762cc5b"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Posicion actual ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="279" y="0" width="138" height="37" backcolor="#5CDBF7" uuid="49743e49-296d-4b9d-bd58-5074220b0664">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2176db6-0565-469f-a5a3-6c637044fc55"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Velocidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="0" width="138" height="37" backcolor="#5CDBF7" uuid="884190aa-b47c-45fd-a2d0-88379f11e9e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfb0f1c1-7e81-458e-855e-479dd0f88bc2"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="141" height="36" uuid="515efb7d-3bd9-425b-80cf-938d7d687394">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="27a37dc6-dbda-4531-8694-c56836a60442"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="36" uuid="a1351863-ce88-4c21-8113-a35d2485927e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b90fea31-f42a-4af8-b390-f4dda762cc5b"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{posicion_actual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="36" uuid="2ef52786-5647-44e9-86e8-ca368bbe37f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2176db6-0565-469f-a5a3-6c637044fc55"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{velocidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="36" uuid="f4249fff-dc69-4057-8674-85af7dddabed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfb0f1c1-7e81-458e-855e-479dd0f88bc2"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
